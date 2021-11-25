@@ -8,11 +8,14 @@
     --gray: #C9C9C9;
     --brown: #b59968;
     --red: #EB1527;
-    /* Sizes */
-    --header-Height: 100px;
-    --breakpoint-desktop: 1200px;
-    --breakpoint-laptop: 1024px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-mobile: 480px;
+
+    /* Fonts */
+    --font-family-global: 'Montserrat', sans-serif;
+    --font-family-title: 'Raleway', sans-serif;
+
+    --font-size-title: 2em;
+    --font-size-body: 1.25em;
+    --font-size-caption: 1em;
+
 }
 

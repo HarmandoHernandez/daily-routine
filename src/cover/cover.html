@@ -10,27 +10,28 @@
     <link rel="stylesheet" href="./../../css/global.css">
     <!-- Personal style -->
     <link rel="stylesheet" href="./cover.css">
+    <link rel="stylesheet" href="./logo.css">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="./deploy-menu.css">
     <!-- Icons -->
     <link rel="icon" href="./../../assets/icons/favicon.ico">
 </head>
 
-<body>
+<body class="page">
   <header class="header">
     <div class="header__deploy-menu" id="header__deploy-menu" >
         <span class="header__bar"></span>
         <span class="header__bar"></span>
         <span class="header__bar"></span>
     </div>
-    <div class="header__logo">
-      <h2>Daily Routine</h2>
-    </div>
+    <a href="#" class="header__logo">
+      <h2 class="header__logo-title">Daily Routine</h2>
+    </a>
     <nav class="header__nav">
       <ul class="header__menu" id="header__menu"> </ul>
     </nav>
     <template id="header__option">
-      <li class="header__option">
+      <li>
         <a href="#" class="header__link">
           <span>Option</span>
         </a>
@@ -38,9 +39,9 @@
     </template>
   </header>
 
-  <main>
-    <!-- 
-    <aside>
+  <!--main class="main">
+    <article class="main__info">
+
       <div class="phrase">
         <span>DO</span>
         <span>N'T</span>
@@ -51,20 +52,20 @@
       <div class="details">
         <ul class="details__date">
           <li>
-            <p>01</p>
-            <p>DIC</p>
+            <span>01</span>
+            <span>DIC</span>
           </li>
           <li>
-            <p>02</p>
-            <p>DIC</p>
+            <span>02</span>
+            <span>DIC</span>
           </li>
           <li>
-            <p>03</p>
-            <p>DIC</p>
+            <span>03</span>
+            <span>DIC</span>
           </li>
           <li>
-            <p>04</p>
-            <p>DIC</p>
+            <span>04</span>
+            <span>DIC</span>
           </li>
         </ul>
         <p class="details__desciption">
@@ -74,9 +75,11 @@
           voluptatem! Obcaecati?
         </p>
       </div> 
-    </aside>
-    -->
-  </main>
+  </article>
+  <article class="main__daily">
+
+  </article>
+  </main-->
   <script src="./cover.js"></script>
   <script src="./menu.js" type="module"></script>
   <script src="./deploy-menu.js"></script>

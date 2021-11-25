@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function BuildOption (option) {
       const menuOption = menuOptionTemplate.content.cloneNode(true)
       menuOption.querySelector('a').href = `#${option.id}`
-      menuOption.querySelector('span').innerHTML = option.title
+      menuOption.querySelector('span').innerHTML = option.title.toUpperCase()
       // menuOption.onclick = (e) => EvaluateCurrentOption(e)
       return menuOption
     }
@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
       function activateLinks () {
       // Remover al que tenga el active activo
         activeLinks.forEach((item) => {
-          item.classList.remove('header__option--active')
+          // item.classList.remove('header__option--active')
           item.querySelector('a').classList.remove('header__link--active')
         })
-        this.classList.add('header__option--active')
+        // this.classList.add('header__option--active')
         this.querySelector('a').classList.add('header__link--active')
       }
     }

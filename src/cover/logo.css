@@ -1,0 +1,15 @@
+ /* - Desktop */
+ .header__logo {
+    height: 3.1em;
+    margin-left: 2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__logo-title {
+    font-size: var(--font-size-title);
+    font-family: var(--font-family-global);
+    color: var(--white);
+  }
+  
