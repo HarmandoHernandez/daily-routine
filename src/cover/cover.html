@@ -25,7 +25,7 @@
         <span class="header__bar"></span>
     </div>
     <a href="#" class="header__logo">
-      <h2 class="header__logo-title">Daily Routine</h2>
+      <h1 class="header__logo-title">Daily Routine</h1>
     </a>
     <nav class="header__nav">
       <ul class="header__menu" id="header__menu"> </ul>
@@ -39,47 +39,49 @@
     </template>
   </header>
 
-  <!--main class="main">
+  <main class="main">
     <article class="main__info">
-
-      <div class="phrase">
-        <span>DO</span>
-        <span>N'T</span>
-        <br />
-        <span>QU</span>
-        <span>IT!</span>
+      <div class="info__phrase">
+        <!-- <div class="phrase-part1"> -->
+          <span class="phrase__letter">D</span>
+          <span class="phrase__letter">O</span>
+          <span class="phrase__letter phrase__letter--blur">N</span>
+          <span class="phrase__letter phrase__letter--blur">'</span>
+          <span class="phrase__letter phrase__letter--blur">T</span>
+          <br>
+        <!-- </div>
+        <div class="phrase-part2"> -->
+          <span class="phrase__letter phrase__letter--blur">Q</span>
+          <span class="phrase__letter phrase__letter--blur">U</span>
+          <span class="phrase__letter">I</span>
+          <span class="phrase__letter">T</span>
+          <span class="phrase__letter">!</span>
+        <!-- </div> -->
       </div>
-      <div class="details">
-        <ul class="details__date">
-          <li>
-            <span>01</span>
-            <span>DIC</span>
-          </li>
-          <li>
-            <span>02</span>
-            <span>DIC</span>
-          </li>
-          <li>
-            <span>03</span>
-            <span>DIC</span>
-          </li>
-          <li>
-            <span>04</span>
-            <span>DIC</span>
-          </li>
-        </ul>
-        <p class="details__desciption">
+      <div class="info__date">
+          <div class="date__date">
+            <span id="date__yesterday">00</span>
+          </div>
+          <div class="date__date date__date--today" id="date__today">
+            <span id="date__today">00</span>
+          </div>
+          <div class="date__date">
+            <span id="date__tomorrow">00</span>
+          </div>
+      </div>
+      <div class="info_desciption">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quos ad
           alias, incidunt atque quod reprehenderit sapiente, praesentium rerum
           illum eos voluptates aperiam harum possimus earum, in excepturi
           voluptatem! Obcaecati?
-        </p>
-      </div> 
+      </div>
+    </article>
+    <!--Daily-->
+    <article class="main__daily">
+        <!-- <div class="cube">Hi</div> -->
   </article>
-  <article class="main__daily">
-
-  </article>
-  </main-->
+  </main>
+  <!-- scripts -->
   <script src="./cover.js"></script>
   <script src="./menu.js" type="module"></script>
   <script src="./deploy-menu.js"></script>
