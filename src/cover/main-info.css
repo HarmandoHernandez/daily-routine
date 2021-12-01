@@ -42,6 +42,14 @@
     background: var(--red);
   }
 
+  .info_desciption {
+    color: var(--gray);
+    grid-area: description;
+    font-family: var(--font-family-global);
+    max-width: 25em;
+    padding-top: 0.5em;
+  }
+  
 /* Laptop */
   @media only screen and (max-width: 1100px) {
     .phrase__letter {
@@ -59,6 +67,10 @@
     .date__date--today::after {
       left: 0;
     }
+
+    .info_desciption {
+        padding: 0 2em;
+      }
   }
   
   /* - Mobile */
@@ -76,5 +88,9 @@
 
     .info__date {
         padding-left: 0.5em;
+    }
+
+    .info_desciption {
+        padding: 0 0.5em;
     }
   }

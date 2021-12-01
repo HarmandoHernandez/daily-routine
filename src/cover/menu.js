@@ -1,53 +1,39 @@
 import { MenuOption } from './menu-option.js'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const Menu = () => {
-    const menuOptions = []
-    menuOptions.push(new MenuOption('home', 'Home'))
-    menuOptions.push(new MenuOption('support', 'Support'))
-    menuOptions.push(new MenuOption('settings', 'Settings'))
-    menuOptions.push(new MenuOption('about', 'About us'))
-
-    // Elements nav and template of menu option
+  const Menu = (function () {
+    const MENU_OPTIONS = [
+      new MenuOption('home', 'Home'),
+      new MenuOption('support', 'Support'),
+      new MenuOption('settings', 'Settings'),
+      new MenuOption('about', 'About us')
+    ]
     const menu = document.getElementById('header__menu')
-    const menuOptionTemplate = document.getElementById('header__option')
+    const menuOptionTemplate = document.getElementById('header__option') // Template of menu option
+    let currentOption = MENU_OPTIONS[0].id
 
-    BuildMenu()
-
-    function BuildMenu () {
-      menuOptions.forEach((option) => {
-        const menuOption = BuildOption(option)
-        menu.appendChild(menuOption)
-      })
+    const EvaluateCurrentOption = function (id = currentOption) {
+      // Inactive current option
+      document.getElementById(currentOption)
+        .querySelector('a').classList.remove('header__link--active')
+      // Active the new current Option
+      document.getElementById(id)
+        .querySelector('a').classList.add('header__link--active')
+      // Update Current Option
+      currentOption = id
     }
 
-    function BuildOption (option) {
+    const BuildOption = (option) => {
       const menuOption = menuOptionTemplate.content.cloneNode(true)
-      menuOption.querySelector('a').href = `#${option.id}`
+      menuOption.querySelector('a').href = '#'
       menuOption.querySelector('span').innerHTML = option.title.toUpperCase()
-      // menuOption.onclick = (e) => EvaluateCurrentOption(e)
+      menuOption.querySelector('li').setAttribute('id', option.id)
+      menuOption.querySelector('li').addEventListener('click', () => EvaluateCurrentOption(option.id))
       return menuOption
     }
 
+    // Build Menu
+    MENU_OPTIONS.forEach((option) => menu.appendChild(BuildOption(option)))
     EvaluateCurrentOption()
-
-    function EvaluateCurrentOption () {
-      const activeLinks = document.querySelectorAll('nav li')
-
-      activeLinks.forEach((item) => {
-        item.addEventListener('click', activateLinks)
-      })
-      function activateLinks () {
-      // Remover al que tenga el active activo
-        activeLinks.forEach((item) => {
-          // item.classList.remove('header__option--active')
-          item.querySelector('a').classList.remove('header__link--active')
-        })
-        // this.classList.add('header__option--active')
-        this.querySelector('a').classList.add('header__link--active')
-      }
-    }
-  }
-
-  Menu()
+  }())
 })
